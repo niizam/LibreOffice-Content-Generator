@@ -1,6 +1,8 @@
 # LibreOffice AI Content Generator
 
 This is simple python macro script for LibreOffice to help you generate content from selected words/sentences with AI for free.  
+## Demo
+![loai](https://github.com/niizam/LibreOffice-Content-Generator/assets/45286708/34f1b848-f1fa-4508-aecf-28776dad9062)
 
 ## Requirements
 - APSO (Alternative Python Script Organizer), get here [APSO](https://extensions.libreoffice.org/en/extensions/show/apso-alternative-script-organizer-for-python)
@@ -11,7 +13,7 @@ This is simple python macro script for LibreOffice to help you generate content 
 ## Usage
 - Install APSO extension first, if you don't know how to install LibreOffice extension DDG-ing first!
 - Open LibreOffice Writer then, open Macros in Tools > Macros > Organize Python Scripts
-- Create new module, then copy and past content of LibreOffice_AI.py to your new module.
+- Copy and paste `LibreOffice_AI.py` to `$HOME/.config/libreoffice/4/user/Scripts/python`.
 - Write a sentences, select it, then run macro.
 
 ## Need Help to Improve 
