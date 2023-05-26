@@ -1,31 +1,14 @@
-import os
-from dotenv import dotenv_values
-
-import sys # this part is optional, sometime libreoffice can't detect installed module
-sys.path.append('/path/to/python/openai/modules') #  use 'pip show openai' to get the path 
-import openai
-
-# Get API Token
-config = dotenv_values('.env')
-openai.api_key = config['API_KEY']
+from baichat_py import BAIChat
 
 def buat_konten():
+    chat = BAIChat()
     doc = XSCRIPTCONTEXT.getDocument()
     selection = doc.getCurrentSelection()
     if selection.supportsService("com.sun.star.text.TextRanges"):
         for textRange in selection:
             prompt = textRange.getString()
-            generated_text = f"Buatkan saya sebuah: {prompt}"
-            response = openai.Completion.create(
-              model="text-davinci-003",
-              prompt=generated_text,
-              temperature=0.85,
-              max_tokens=1024,
-              top_p=1,
-              frequency_penalty=0,
-              presence_penalty=0
-            )
-            output_text = response.choices[0].text
+            response_text = chat.sync_ask(prompt).text
+            
             cursor = doc.getCurrentController().getViewCursor()
             docText = doc.Text
             
@@ -34,8 +17,8 @@ def buat_konten():
             text_with_newline = text + "\n"
             textRange.setString(text_with_newline)
             
-            # insert Open AI respons to current document
-            docText.insertString(cursor, output_text, False)
+            # insert BAIChat response to current document
+            docText.insertString(cursor, response_text, False)
             
             # Apply styling
             textCursor = textRange.getText().createTextCursorByRange(textRange)
