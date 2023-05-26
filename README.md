@@ -5,14 +5,11 @@ This is simple python macro script for LibreOffice to help you generate content 
 ![loai](https://github.com/niizam/LibreOffice-Content-Generator/assets/45286708/34f1b848-f1fa-4508-aecf-28776dad9062)
 
 ## Requirements
-- APSO (Alternative Python Script Organizer), get here [APSO](https://extensions.libreoffice.org/en/extensions/show/apso-alternative-script-organizer-for-python)
 - Python Modules;
     - baichat-py
 - Little knowledge of LibreOffice macros and python
 
 ## Usage
-- Install APSO extension first, if you don't know how to install LibreOffice extension DDG-ing first!
-- Open LibreOffice Writer then, open Macros in Tools > Macros > Organize Python Scripts
 - Copy and paste `LibreOffice_AI.py` to `$HOME/.config/libreoffice/4/user/Scripts/python`.
 - Write a sentences, select it, then run macro.
 
