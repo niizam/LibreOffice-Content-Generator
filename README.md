@@ -8,7 +8,7 @@ This is simple python macro script for LibreOffice to help you generate content 
 - Python Modules;
     - baichat-py
     ```bash
-    sudo pip install baichat-py
+    sudo pip install baichat-py==0.2.2
     ```
 - Little knowledge of LibreOffice macros and python
 
