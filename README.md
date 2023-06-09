@@ -6,10 +6,11 @@ This is simple python macro script for LibreOffice to help you generate content 
 
 ## Requirements
 - Python Modules;
-    - baichat-py
-    ```bash
-    sudo pip install baichat-py==0.2.2
-    ```
+    - asyncio
+    - baichat-py (0.2.2)
+```bash
+sudo pip install asyncio baichat-py==0.2.2
+```
 - Little knowledge of LibreOffice macros and python
 
 ## Usage
