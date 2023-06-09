@@ -1,13 +1,15 @@
+import asyncio
 from baichat_py import BAIChat
 
 def buat_konten():
+    loop = asyncio.get_event_loop() 
     chat = BAIChat()
     doc = XSCRIPTCONTEXT.getDocument()
     selection = doc.getCurrentSelection()
     if selection.supportsService("com.sun.star.text.TextRanges"):
         for textRange in selection:
             prompt = textRange.getString()
-            response_text = chat.sync_ask(prompt).text
+            response_text = loop.run_until_complete((prompt).text)
             
             cursor = doc.getCurrentController().getViewCursor()
             docText = doc.Text
