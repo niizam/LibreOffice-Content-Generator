@@ -9,7 +9,7 @@ def buat_konten():
     if selection.supportsService("com.sun.star.text.TextRanges"):
         for textRange in selection:
             prompt = textRange.getString()
-            response_text = loop.run_until_complete((prompt).text)
+            response_text = loop.run_until_complete(chat.async_ask(prompt))
             
             cursor = doc.getCurrentController().getViewCursor()
             docText = doc.Text
@@ -20,7 +20,7 @@ def buat_konten():
             textRange.setString(text_with_newline)
             
             # insert BAIChat response to current document
-            docText.insertString(cursor, response_text, False)
+            docText.insertString(cursor, response_text.text, False)
             
             # Apply styling
             textCursor = textRange.getText().createTextCursorByRange(textRange)
