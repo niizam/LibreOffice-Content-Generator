@@ -5,6 +5,7 @@ This is simple python macro script for LibreOffice to help you generate content 
 ![loai](https://github.com/niizam/LibreOffice-Content-Generator/assets/45286708/34f1b848-f1fa-4508-aecf-28776dad9062)
 
 ## Requirements
+- [APSO (Alternative Python Script Organizer)](https://extensions.libreoffice.org/en/extensions/show/apso-alternative-script-organizer-for-python), download [APSO here](https://extensions.libreoffice.org/assets/downloads/508/1663087602/apso.oxt)
 - Python Modules;
     - asyncio
     - baichat-py (0.2.2)
