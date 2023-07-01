@@ -15,6 +15,10 @@ sudo pip install asyncio baichat-py==0.2.2
 - Little knowledge of LibreOffice macros and python
 
 ## Usage
+- Open LibreOffice Writer
+    - Select Tools → Extension Manager from the menu bar.
+    - In the Extension Manager dialog (Figure 2)
+    - click Add and select [apso.oxt](https://extensions.libreoffice.org/assets/downloads/508/1663087602/apso.oxt)
 - Copy and paste `LibreOffice_AI.py` to `$HOME/.config/libreoffice/4/user/Scripts/python`.
 - Write a sentences, select it, then run macro.
 
